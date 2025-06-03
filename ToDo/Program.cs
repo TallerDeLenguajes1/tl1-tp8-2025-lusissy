@@ -14,3 +14,18 @@ for (int i = 0; i < numeroTareas; i++)
     Tarea pendiente= new Tarea(1000+i, descripcion[indice], duracion);
     tPendientes.Add(pendiente);
 }
+
+int idRealizado;
+Console.WriteLine("Escribe el id de la tarea ya realizada:");
+string? realizado=Console.ReadLine();
+int.TryParse(realizado, out idRealizado);
+
+for (int j = 0; j < numeroTareas; j++)
+{
+    if (tPendientes[j].TareaID == idRealizado)
+    {
+        tRealizadas.Add(tPendientes[j]);
+        tPendientes.RemoveAt(j);
+        break;
+    }
+}
