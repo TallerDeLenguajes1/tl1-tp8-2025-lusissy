@@ -43,3 +43,13 @@ for (int k = 0; k < tPendientes.Count; k++)
         Console.WriteLine("No hay tareas por mostrar");
     }
 }
+
+Console.WriteLine("---------TAREAS---------");
+for (int h = 0; h < tPendientes.Count; h++)
+{
+    tPendientes[h].MostrarDatos();
+}
+for (int d = 0; d < tPendientes.Count; d++)
+{
+    tRealizadas[d].MostrarDatos();
+}
