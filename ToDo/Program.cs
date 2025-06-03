@@ -20,12 +20,26 @@ Console.WriteLine("Escribe el id de la tarea ya realizada:");
 string? realizado=Console.ReadLine();
 int.TryParse(realizado, out idRealizado);
 
-for (int j = 0; j < numeroTareas; j++)
+for (int j = 0; j < tPendientes.Count; j++)
 {
+
     if (tPendientes[j].TareaID == idRealizado)
     {
         tRealizadas.Add(tPendientes[j]);
         tPendientes.RemoveAt(j);
         break;
+    }
+    tPendientes[j].MostrarDatos();
+}
+Console.WriteLine("Escribe la descripcion de la tarea a mostrar:");
+string? descrp=Console.ReadLine();
+for (int k = 0; k < tPendientes.Count; k++)
+{
+    if (tPendientes[k].Descripcion == descrp) 
+    {
+        tPendientes[k].MostrarDatos();
+    }else
+    {
+        Console.WriteLine("No hay tareas por mostrar");
     }
 }
