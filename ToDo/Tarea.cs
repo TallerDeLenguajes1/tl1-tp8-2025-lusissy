@@ -11,13 +11,8 @@ namespace ToDoEspacio
             Descripcion=desc;
             Duracion=duracion;
         }
-        public void MostrarDatos()
-        {
-            Console.WriteLine($"TareaId: {TareaID} ");
-            Console.WriteLine($"Descripcion: {Descripcion}");
-            Console.WriteLine($"Duracion: {Duracion} min");
-            
-        }
+    
+        
     }
     
 }
